@@ -74,6 +74,7 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
   upgrade_trigger "2"
   subnet "${PUBLIC_SUBNET_NAME}"
   disable_cc_client false
+  number 1
   disks [
          {
            :device_name => "/dev/xvda",
@@ -86,8 +87,6 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
          "CLOUD=coreo"
           ]
 end
-
-# number 1
 
 # coreo_aws_ec2_autoscaling "${SERVER_NAME}${SUFFIX}" do
 #   action :sustain 
