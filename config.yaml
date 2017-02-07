@@ -60,6 +60,10 @@ variables:
         default: t2.micro
         description: the size of the server to launch
         required: true
+    SERVER_UPGRADE_TRIGGER:
+        default: initial
+        description: A String used to trigger upgrades of ec2 instances. If specified, CloudCoreo will not roll instances unless this value changes.
+        required: false
     TIMEZONE:
         default: America/Los_Angeles
         value: America/Los_Angeles
