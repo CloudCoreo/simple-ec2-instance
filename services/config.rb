@@ -71,7 +71,7 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
 #  role "${SERVER_NAME}"
   ssh_key "${SERVER_KEYPAIR}"
   associate_public_ip true
-  upgrade_trigger "2"
+  upgrade_trigger "${SERVER_UPGRADE_TRIGGER}"
   disks [
          {
            :device_name => "/dev/xvda",
@@ -87,8 +87,8 @@ end
 
 coreo_aws_ec2_autoscaling "${SERVER_NAME}${SUFFIX}" do
   action :sustain 
-  minimum 3
-  maximum 3
+  minimum 1
+  maximum 1
   server_definition "${SERVER_NAME}${SUFFIX}"
   subnet "${PUBLIC_SUBNET_NAME}"
 end
