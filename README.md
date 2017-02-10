@@ -20,6 +20,14 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
 
 ## Required variables with default
 
+### `AUTOSCALING_GROUP_MAXIMUM`:
+  * description: Maximum number of instances the autoscale group will launch
+  * default: 1
+
+### `AUTOSCALING_GROUP_MINIMUM`:
+  * description: Minimum number of instances the autoscale group will launch
+  * default: 1
+
 ### `VPC_NAME`:
   * description: The name of the VPC that this server is to be created in
   * default: test-vpc
@@ -75,7 +83,10 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
 
 ## Optional variables with default
 
-**None**
+### `SERVER_UPGRADE_TRIGGER`:
+  * description: A String used to trigger upgrades of ec2 instances. If specified, CloudCoreo will not roll instances unless this value changes.
+  * default: initial
+
 
 
 ## Optional variables with no default
