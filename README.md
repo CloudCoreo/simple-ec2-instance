@@ -4,7 +4,7 @@ simple-ec2-instance
 
 
 ## Description
-This repo is designed to work with CloudCoreo. It creates a simple server instance via an Autoscaling Group
+This composite creates a simple AWS Linux server instance via an Autoscaling Group
 
 
 ## Hierarchy
@@ -99,6 +99,7 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
 
 ## Tags
 1. Servers
+1. AWS Linux
 
 
 ## Categories
